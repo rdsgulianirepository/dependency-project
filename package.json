@@ -1,21 +1,19 @@
 {
   "name": "dependency-project",
   "version": "0.0.0",
-    "scripts": {
-      "transpile": "ngc",
-      "package": "rollup -c",
-      "minify": "uglifyjs dist/bundles/amazing.umd.js --screw-ie8 --compress --mangle --comments --output dist/bundles/amazing.umd.min.js",
-      "build": "npm run transpile && npm run package && npm run minify"
+  "scripts": {
+    "transpile": "ngc",
+    "package": "rollup -c",
+    "minify": "uglifyjs dist/bundles/amazing.umd.js --screw-ie8 --compress --mangle --comments --output dist/bundles/amazing.umd.min.js",
+    "build": "npm run transpile"
   },
   "private": true,
   "dependencies": {
     "@angular/animations": "~7.1.0",
-    "@angular/common": "~7.1.0",
-    "@angular/compiler": "~7.1.0",
-    "@angular/core": "~7.1.0",
     "@angular/forms": "~7.1.0",
     "@angular/platform-browser": "~7.1.0",
     "@angular/platform-browser-dynamic": "~7.1.0",
+    "@angular/platform-server": "^7.2.15",
     "@angular/router": "~7.1.0",
     "core-js": "^2.5.4",
     "rxjs": "~6.3.3",
@@ -24,8 +22,11 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.11.0",
-    "@angular/cli": "~7.1.4",
-    "@angular/compiler-cli": "~7.1.0",
+    "@angular/cli": "^7.3.9",
+    "@angular/common": "^7.2.15",
+    "@angular/compiler": "^7.2.15",
+    "@angular/compiler-cli": "^7.2.15",
+    "@angular/core": "^7.2.15",
     "@angular/language-service": "~7.1.0",
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "~2.0.3",
@@ -42,7 +43,7 @@
     "rollup": "^1.11.3",
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
-    "typescript": "~3.1.6",
+    "typescript": "3.1.6",
     "uglify-js": "^3.5.12"
   }
 }
