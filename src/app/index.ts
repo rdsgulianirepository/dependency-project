@@ -1,0 +1,1 @@
+export {KingComponent } from './king/king.component'
